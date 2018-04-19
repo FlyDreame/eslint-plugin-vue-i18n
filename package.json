@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-vue-i18nstring",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "ESLint plugin for vue i18n",
   "main": "lib/index.js",
   "scripts": {
