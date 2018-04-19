@@ -31,7 +31,8 @@ Finally, enable the rules that you would like to use.
 ```json
 {
   "rules": {
-    "vue-i18nstring/no-chinese-character-vue": 1
+    "vue-i18nstring/no-chinese-character-vue": 1,
+    "vue-i18nstring/no-chinese-character-js": 1
   }
 }
 ```
