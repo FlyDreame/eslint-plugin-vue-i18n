@@ -27,8 +27,7 @@ module.exports = {
   overrides: [{
     files: ['lib/rules/*.js'],
     rules: {
-      "consistent-docs-description": "error",
-      "no-invalid-meta": "error"
+      
     }
   }]
 }
