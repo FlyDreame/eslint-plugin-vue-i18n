@@ -13,7 +13,7 @@ tester.run('no-chinese-character', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template><div class="foo">66666</div></template>
+        <template><div class="foo" title="6666">66666</div></template>
       `
     }
   ],
@@ -21,9 +21,16 @@ tester.run('no-chinese-character', rule, {
     {
       filename: 'test.vue',
       code: `
-        <template><div class="foo">哈哈哈哈</div></template>
+        <template><div class="foo" >哈哈哈哈</div></template>
       `,
-      errors: [{ message: 'Using Chinese characters' }]
+      errors: [{ message: 'Using Chinese characters: 哈哈哈哈' }]
+    },
+    {
+      filename: 'test2.vue',
+      code: `
+        <template><div class="foo" title="哈哈哈哈哈"></div></template>
+      `,
+      errors: [{ message: 'Using Chinese characters: 哈哈哈哈哈' }]
     }
   ]
 })

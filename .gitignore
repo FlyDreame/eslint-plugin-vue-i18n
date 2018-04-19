@@ -3,4 +3,5 @@
 /tests/integrations/*/node_modules
 /node_modules
 /test.*
+.npmrc
 yarn.lock
