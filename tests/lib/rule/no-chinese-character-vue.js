@@ -1,19 +1,25 @@
 'use strict'
 
 const RuleTester = require('eslint').RuleTester
-const rule = require('../../../lib/rules/no-chinese-character')
+const rule = require('../../../lib/rules/no-chinese-character-vue')
 
 const tester = new RuleTester({
   parser: 'vue-eslint-parser',
   parserOptions: { ecmaVersion: 2015 }
 })
 
-tester.run('no-chinese-character', rule, {
+tester.run('no-chinese-character-vue', rule, {
   valid: [
     {
       filename: 'test.vue',
       code: `
-        <template><div class="foo" title="6666">66666</div></template>
+        <template><div class="foo">66666</div></template>
+      `
+    },
+    {
+      filename: 'test2.vue',
+      code: `
+        <template><div class="foo" title="6666"></div></template>
       `
     }
   ],
